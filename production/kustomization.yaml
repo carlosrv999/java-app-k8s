@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: production
+
+resources:
+  - "git@github.com:carlosrv999/gitops-java-k8s.git?ref=v0.0.2"
+images:
+  - name: container-image
+    newName: us-central1-docker.pkg.dev/inductive-seer-390414/images-docker/java-k8s
+    newTag: v0.0.1-SNAPSHOT
