@@ -1,7 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: development
-
 resources:
   - "git@github.com:carlosrv999/gitops-java-k8s.git?ref=v0.0.2"
   - additional
